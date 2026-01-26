@@ -1,3 +1,6 @@
+
+console.log('🚀 Starting test...');
+
 const db = require('./connection');
 
 async function testDatabase() {

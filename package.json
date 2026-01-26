@@ -1,0 +1,26 @@
+{
+    "name": "greatlife-ai-system",
+    "version": "1.0.0",
+    "description": "GreatLIFE Golf Course Management AI Automation System",
+    "main": "src/middleware/server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node src/middleware/server.js",
+      "dev": "nodemon src/middleware/server.js"
+    },
+    "keywords": ["quickbooks", "automation", "n8n", "ai"],
+    "author": "R",
+    "license": "ISC",
+    "dependencies": {
+      "pg": "^8.11.3",
+      "dotenv": "^16.3.1",
+      "express": "^4.18.2",
+      "body-parser": "^1.20.2",
+      "xml2js": "^0.6.2",
+      "exceljs": "^4.4.0",
+      "cors": "^2.8.5"
+    },
+    "devDependencies": {
+      "nodemon": "^3.0.2"
+    }
+  }
