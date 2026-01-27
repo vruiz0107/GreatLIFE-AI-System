@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?qbxml version="15.0"?>
+<QBXML>
+  <QBXMLMsgsRs>
+    <GeneralSummaryReportQueryRs statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+      <ReportRet>
+        <ReportTitle>Balance Sheet</ReportTitle>
+        <ReportBasis>Accrual</ReportBasis>
+        <ReportData>
+          <DataRow>
+            <RowType>Account</RowType>
+            <ColData colID="0">
+              <value>Cash - Operating</value>
+            </ColData>
+            <ColData colID="1">
+              <value>75000.00</value>
+            </ColData>
+            <RowData rowType="text">
+              <value>Account:1000:Bank</value>
+            </RowData>
+          </DataRow>
+          <DataRow>
+            <RowType>Account</RowType>
+            <ColData colID="0">
+              <value>Accounts Receivable</value>
+            </ColData>
+            <ColData colID="1">
+              <value>42000.00</value>
+            </ColData>
+            <RowData rowType="text">
+              <value>Account:1200:Accounts Receivable</value>
+            </RowData>
+          </DataRow>
+          <DataRow>
+            <RowType>Subtotal</RowType>
+            <ColData colID="0">
+              <value>Total Current Assets</value>
+            </ColData>
+            <ColData colID="1">
+              <value>117000.00</value>
+            </ColData>
+          </DataRow>
+          <DataRow>
+            <RowType>Account</RowType>
+            <ColData colID="0">
+              <value>Equipment</value>
+            </ColData>
+            <ColData colID="1">
+              <value>250000.00</value>
+            </ColData>
+            <RowData rowType="text">
+              <value>Account:1500:Fixed Asset</value>
+            </RowData>
+          </DataRow>
+          <DataRow>
+            <RowType>Subtotal</RowType>
+            <ColData colID="0">
+              <value>Total Assets</value>
+            </ColData>
+            <ColData colID="1">
+              <value>367000.00</value>
+            </ColData>
+          </DataRow>
+          <DataRow>
+            <RowType>Account</RowType>
+            <ColData colID="0">
+              <value>Accounts Payable</value>
+            </ColData>
+            <ColData colID="1">
+              <value>28000.00</value>
+            </ColData>
+            <RowData rowType="text">
+              <value>Account:2000:Accounts Payable</value>
+            </RowData>
+          </DataRow>
+          <DataRow>
+            <RowType>Account</RowType>
+            <ColData colID="0">
+              <value>Long-term Debt</value>
+            </ColData>
+            <ColData colID="1">
+              <value>150000.00</value>
+            </ColData>
+            <RowData rowType="text">
+              <value>Account:2500:Long Term Liability</value>
+            </RowData>
+          </DataRow>
+          <DataRow>
+            <RowType>Subtotal</RowType>
+            <ColData colID="0">
+              <value>Total Liabilities</value>
+            </ColData>
+            <ColData colID="1">
+              <value>178000.00</value>
+            </ColData>
+          </DataRow>
+          <DataRow>
+            <RowType>Account</RowType>
+            <ColData colID="0">
+              <value>Owner's Equity</value>
+            </ColData>
+            <ColData colID="1">
+              <value>189000.00</value>
+            </ColData>
+            <RowData rowType="text">
+              <value>Account:3000:Equity</value>
+            </RowData>
+          </DataRow>
+          <DataRow>
+            <RowType>Total</RowType>
+            <ColData colID="0">
+              <value>Total Liabilities &amp; Equity</value>
+            </ColData>
+            <ColData colID="1">
+              <value>367000.00</value>
+            </ColData>
+          </DataRow>
+        </ReportData>
+      </ReportRet>
+    </GeneralSummaryReportQueryRs>
+  </QBXMLMsgsRs>
+</QBXML>

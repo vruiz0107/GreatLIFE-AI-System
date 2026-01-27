@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?qbxml version="15.0"?>
+<QBXML>
+  <QBXMLMsgsRs>
+    <GeneralSummaryReportQueryRs statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+      <ReportRet>
+        <ReportTitle>Profit &amp; Loss</ReportTitle>
+        <ReportBasis>Accrual</ReportBasis>
+        <NumRows>15</NumRows>
+        <NumColumns>2</NumColumns>
+        <ReportData>
+          <DataRow>
+            <RowType>Account</RowType>
+            <ColData colID="0">
+              <value>Sales Revenue</value>
+            </ColData>
+            <ColData colID="1">
+              <value>125000.00</value>
+            </ColData>
+            <RowData rowType="text">
+              <value>Account:4000:Income</value>
+            </RowData>
+          </DataRow>
+          <DataRow>
+            <RowType>Account</RowType>
+            <ColData colID="0">
+              <value>Membership Fees</value>
+            </ColData>
+            <ColData colID="1">
+              <value>85000.00</value>
+            </ColData>
+            <RowData rowType="text">
+              <value>Account:4100:Income</value>
+            </RowData>
+          </DataRow>
+          <DataRow>
+            <RowType>Subtotal</RowType>
+            <ColData colID="0">
+              <value>Total Income</value>
+            </ColData>
+            <ColData colID="1">
+              <value>210000.00</value>
+            </ColData>
+          </DataRow>
+          <DataRow>
+            <RowType>Account</RowType>
+            <ColData colID="0">
+              <value>Payroll Expenses</value>
+            </ColData>
+            <ColData colID="1">
+              <value>65000.00</value>
+            </ColData>
+            <RowData rowType="text">
+              <value>Account:6000:Expense</value>
+            </RowData>
+          </DataRow>
+          <DataRow>
+            <RowType>Account</RowType>
+            <ColData colID="0">
+              <value>Course Maintenance</value>
+            </ColData>
+            <ColData colID="1">
+              <value>45000.00</value>
+            </ColData>
+            <RowData rowType="text">
+              <value>Account:6100:Expense</value>
+            </RowData>
+          </DataRow>
+          <DataRow>
+            <RowType>Account</RowType>
+            <ColData colID="0">
+              <value>Utilities</value>
+            </ColData>
+            <ColData colID="1">
+              <value>12000.00</value>
+            </ColData>
+            <RowData rowType="text">
+              <value>Account:6200:Expense</value>
+            </RowData>
+          </DataRow>
+          <DataRow>
+            <RowType>Subtotal</RowType>
+            <ColData colID="0">
+              <value>Total Expenses</value>
+            </ColData>
+            <ColData colID="1">
+              <value>122000.00</value>
+            </ColData>
+          </DataRow>
+          <DataRow>
+            <RowType>Total</RowType>
+            <ColData colID="0">
+              <value>Net Income</value>
+            </ColData>
+            <ColData colID="1">
+              <value>88000.00</value>
+            </ColData>
+          </DataRow>
+        </ReportData>
+      </ReportRet>
+    </GeneralSummaryReportQueryRs>
+  </QBXMLMsgsRs>
+</QBXML>
