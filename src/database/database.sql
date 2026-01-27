@@ -95,4 +95,4 @@ CREATE INDEX idx_balance_sheet_date ON balance_sheet_data(report_date);
 CREATE INDEX idx_balance_sheet_company ON balance_sheet_data(company_file_id);
 CREATE INDEX idx_ar_aging_date ON ar_aging_data(report_date);
 CREATE INDEX idx_ar_aging_company ON ar_aging_data(company_file_id);
-CREATE INDEX idx_customers_company ON customers(company_file_id);ls
+CREATE INDEX idx_customers_company ON customers(company_file_id);
