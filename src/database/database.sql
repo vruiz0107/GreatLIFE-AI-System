@@ -2,6 +2,8 @@
 CREATE TABLE company_files (
     id SERIAL PRIMARY KEY,
     company_name VARCHAR(255) NOT NULL,
+    department_structure JSONB,
+    file_type VARCHAR(100) NOT NULL,
     qb_version VARCHAR(50) NOT NULL,
     location VARCHAR(100) NOT NULL,
     file_path VARCHAR(500),
@@ -9,6 +11,14 @@ CREATE TABLE company_files (
     is_active BOOLEAN DEFAULT true,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     last_synced_at TIMESTAMP
+);
+
+CREATE TABLE departments (
+    id SERIAL PRIMARY KEY,
+    company_file_id INTEGER REFERENCES company_files(id),
+    department_code VARCHAR(10),
+    department_name VARCHAR(100),
+    department_type VARCHAR(50)
 );
 
 -- Chart of Accounts
@@ -19,6 +29,7 @@ CREATE TABLE accounts (
     account_name VARCHAR(255) NOT NULL,
     account_type VARCHAR(100),
     account_number VARCHAR(50),
+    department_code VARCHAR(50),
     description TEXT,
     balance DECIMAL(15, 2),
     is_active BOOLEAN DEFAULT true,
@@ -88,7 +99,10 @@ CREATE TABLE customers (
 -- Indexes for Performance
 CREATE INDEX idx_company_files_location ON company_files(location);
 CREATE INDEX idx_company_files_active ON company_files(is_active);
+CREATE INDEX idx_company_files_type ON company_files(file_type);
 CREATE INDEX idx_accounts_company ON accounts(company_file_id);
+CREATE INDEX idx_accounts_department ON accounts(department_code);
+CREATE INDEX idx_departments_company ON departments(company_file_id);
 CREATE INDEX idx_pl_data_date ON pl_data(report_date);
 CREATE INDEX idx_pl_data_company ON pl_data(company_file_id);
 CREATE INDEX idx_balance_sheet_date ON balance_sheet_data(report_date);
