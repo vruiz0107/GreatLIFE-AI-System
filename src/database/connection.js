@@ -38,18 +38,40 @@ const query = async (text, params) => {
 };
 
 // Insert company file
+// Helper to insert company file
 const insertCompanyFile = async (companyData) => {
-  const { company_name, qb_version, location, file_path, qb_type } = companyData;
-  const text = `
-    INSERT INTO company_files (company_name, qb_version, location, file_path, qb_type)
-    VALUES ($1, $2, $3, $4, $5)
-    ON CONFLICT DO NOTHING
-    RETURNING *;
-  `;
-  const values = [company_name, qb_version, location, file_path, qb_type];
-  const res = await query(text, values);
-  return res.rows[0];
-};
+    const { 
+      company_name, 
+      department_structure, 
+      file_type, 
+      qb_version, 
+      location, 
+      file_path, 
+      qb_type 
+    } = companyData;
+    
+    const text = `
+      INSERT INTO company_files (company_name, department_structure, file_type, qb_version, location, file_path, qb_type)
+      VALUES ($1, $2, $3, $4, $5, $6, $7)
+      ON CONFLICT DO NOTHING
+      RETURNING *;
+    `;
+    const values = [company_name, department_structure, file_type, qb_version, location, file_path, qb_type];
+    const res = await query(text, values);
+    return res.rows[0];
+  };
+// const insertCompanyFile = async (companyData) => {
+//   const { company_name, qb_version, location, file_path, qb_type } = companyData;
+//   const text = `
+//     INSERT INTO company_files (company_name, qb_version, location, file_path, qb_type)
+//     VALUES ($1, $2, $3, $4, $5)
+//     ON CONFLICT DO NOTHING
+//     RETURNING *;
+//   `;
+//   const values = [company_name, qb_version, location, file_path, qb_type];
+//   const res = await query(text, values);
+//   return res.rows[0];
+// };
 
 // Insert account
 const insertAccount = async (accountData) => {
