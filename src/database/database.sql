@@ -96,6 +96,23 @@ CREATE TABLE customers (
     UNIQUE(company_file_id, customer_list_id)
 );
 
+-- Account Mappings for Custom Reports
+CREATE TABLE account_mappings (
+    id SERIAL PRIMARY KEY,
+    account_number VARCHAR(50) NOT NULL,
+    report_name VARCHAR(100) NOT NULL,      -- e.g., 'LTM_SUMMARY', 'INCOME_STATEMENT'
+    report_section VARCHAR(100) NOT NULL,   -- e.g., 'COURSE_REVENUES', 'LABOR', 'EXPENSES'
+    report_line VARCHAR(100) NOT NULL,      -- e.g., 'DUES', 'GREENS_FEES', 'GOLF_OPS_LABOR'
+    calculation_type VARCHAR(50) DEFAULT 'SUM',  -- SUM, COUNT, AVERAGE, etc.
+    notes TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(account_number, report_name, report_line)
+);
+
+-- Index for fast lookups
+CREATE INDEX idx_account_mappings_report ON account_mappings(report_name, report_section, report_line);
+CREATE INDEX idx_account_mappings_account ON account_mappings(account_number);
+
 -- Indexes for Performance
 CREATE INDEX idx_company_files_location ON company_files(location);
 CREATE INDEX idx_company_files_active ON company_files(is_active);
